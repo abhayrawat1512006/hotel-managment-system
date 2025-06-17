@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Paradise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="logo.png" alt="Hotel Logo" class="logo-img">
+            <div class="logo">Hotel Paradise</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button id="book-now-btn" onclick="window.location.href='booking.html'">Book Now</button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero" style="background: url('hero-bg.jpg') no-repeat center center/cover;">
+        <div class="hero-background">
+            <h1>Welcome to Hotel Paradise</h1>
+            <p>Your perfect getaway awaits!</p>
+        </div>
+    </section>
+    
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <Founded>Welcome to Hotel Paradise, your ultimate destination for luxury and comfort. Located in the heart of Dream City, our hotel offers a serene environment with world-class amenities. Founded in 2010, we have been committed to providing an exceptional experience for our guests.
+            Our dedicated staff ensures that every stay is memorable, whether you're here for business or leisure</p>
+        <p>At Hotel Paradise, we prioritize sustainability and community involvement, striving to make a positive impact while offering unparalleled hospitality</p>
+        <p>Our mission is to create a home away from home for our guests, with a touch of elegance and personalized services that cater to your every need</p>
+    </section>
+
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+    <p>At Hotel Paradise, we offer a range of premium services designed to make your stay comfortable and enjoyable</p>
+    <ul>
+        <l><strong>Spa & Wellness,Gourmet Dining,Conference & Event Facilities,Outdoor Pool,Concierge Services</l>
+    </ul>
+    <p>Whether you are looking for relaxation, adventure, or a productive work environment, Hotel Paradise has everything you need to make your stay exceptional.</p>
+</section>
+
+    <section id="rooms" class="section">
+        <h2>Our Rooms</h2>
+        <div class="room-container">
+            <div class="room">
+                <img src="room1.jpg" alt="Deluxe Room">
+                <h3>Deluxe Room</h3>
+                <p>Experience the luxury and comfort of our Deluxe Rooms.</p>
+            </div>
+            <div class="room">
+                <img src="room2.jpg" alt="Suite Room">
+                <h3>Suite Room</h3>
+                <p>Enjoy the spacious and elegant Suite Rooms.</p>
+            </div>
+            <div class="room">
+                <img src="room3.jpg" alt="Suite Room">
+                <h3>Superior Room</h3>
+                <p>Enjoy the spacious and elegant Superior Rooms.</p>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section">
+        <h2>Testimonials</h2>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <p>"Amazing stay! The staff was very friendly and the rooms were spotless."</p>
+                <p><strong>- John Doe</strong></p>
+                <p>Date: 2025-01-01</p>
+                <p>Rating: ⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="testimonial">
+                <p>"The spa services were fantastic, and the view from our room was breathtaking."</p>
+                <p><strong>- Jane Smith</strong></p>
+                <p>Date: 2024-12-15</p>
+                <p>Rating: ⭐⭐⭐⭐</p>
+            </div>
+            <div class="testimonial">
+                <p>"Great food and excellent location. We will definitely come back!"</p>
+                <p><strong>- Emily Johnson</strong></p>
+                <p>Date: 2024-11-20</p>
+                <p>Rating: ⭐⭐⭐⭐⭐</p>
+            </div>
+        </div>
+        <button class="slide-btn" id="prev-btn">❮</button>
+        <button class="slide-btn" id="next-btn">❯</button>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form id="contact-form" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send</button>
+        </form>
+    </section>
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Email: info@hotelparadise.com</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <p>Facebook | Twitter | Instagram</p>
+                <p> © 2025 Hotel Paradise. All rights reserved.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Address</h4>
+                <p>123 Paradise Road, Dream City</p>
+                <p>Gautam Buddha Nagar</p>
+                <p>Greater Noida, U.P</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

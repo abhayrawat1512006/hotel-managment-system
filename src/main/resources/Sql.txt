@@ -1,0 +1,53 @@
+-- Create the hotel database
+CREATE DATABASE HotelParadise;
+
+-- Use the newly created database
+USE HotelParadise;
+
+-- Create the users table
+CREATE TABLE Users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone_number VARCHAR(15) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create the rooms table
+CREATE TABLE Rooms (
+    room_id INT AUTO_INCREMENT PRIMARY KEY,
+    room_type VARCHAR(50) NOT NULL,
+    description TEXT NOT NULL,
+    price_per_night DECIMAL(10, 2) NOT NULL,
+    available BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create the bookings table
+CREATE TABLE Bookings (
+    booking_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    room_id INT NOT NULL,
+    check_in_date DATE NOT NULL,
+    check_out_date DATE NOT NULL,
+    total_price DECIMAL(10, 2) NOT NULL,
+    booking_status VARCHAR(50) DEFAULT 'Pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id),
+    FOREIGN KEY (room_id) REFERENCES Rooms(room_id)
+);
+
+-- Insert sample data into rooms table
+INSERT INTO Rooms (room_type, description, price_per_night, available) VALUES 
+('Deluxe Room', 'Luxurious room with all modern amenities', 120.00, TRUE),
+('Suite Room', 'Spacious suite with a living area', 200.00, TRUE),
+('Standard Room', 'Comfortable room for a budget stay', 80.00, TRUE);
+
+-- Insert sample user (hashed passwords for security purposes in real implementation)
+INSERT INTO Users (full_name, email, phone_number, password) VALUES
+('John Doe', 'john.doe@example.com', '1234567890', 'hashedpassword');
+
+-- Sample booking (after getting user_id and room_id)
+INSERT INTO Bookings (user_id, room_id, check_in_date, check_out_date, total_price) VALUES
+(1, 1, '2025-02-01', '2025-02-05', 480.00);
